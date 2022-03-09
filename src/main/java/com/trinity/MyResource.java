@@ -21,11 +21,11 @@ public class MyResource {
   @Path("/{username}")
   @GET
   @Produces(MediaType.APPLICATION_JSON)
-  public User hello(@PathParam("username") String name) {
+  public Player hello(@PathParam("username") String name) {
 
-      User obj = new User();
-      obj.setId(0);
-      obj.setName(name);
+      Player obj = new Player();
+      obj.setPlayerNumber(0);
+      obj.setLastName(name);
 
       return obj;
 
@@ -34,18 +34,18 @@ public class MyResource {
   @Path("/all")
   @GET
   @Produces(MediaType.APPLICATION_JSON)
-  public List<User> helloList() {
+  public List<Player> helloList() {
 
-      List<User> list = new ArrayList<>();
+      List<Player> list = new ArrayList<>();
 
-      User obj1 = new User();
-      obj1.setId(1);
-      obj1.setName("mkyong");
+      Player obj1 = new Player();
+      obj1.setPlayerNumber(1);
+      obj1.setLastName("mkyong");
       list.add(obj1);
 
-      User obj2 = new User();
-      obj2.setId(2);
-      obj2.setName("zilap");
+      Player obj2 = new Player();
+      obj2.setPlayerNumber(2);
+      obj2.setLastName("zilap");
       list.add(obj2);
 
       return list;

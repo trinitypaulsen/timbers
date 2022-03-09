@@ -17,7 +17,7 @@ public class MainApp {
       // scan packages
       // final ResourceConfig config = new ResourceConfig().packages("com.mkyong");
 
-      final ResourceConfig config = new ResourceConfig(MyResource.class);
+      final ResourceConfig config = new ResourceConfig(MyResource.class, PlayerResource.class);
       final Server server =
               JettyHttpContainerFactory.createServer(URI.create(BASE_URI), config);
 
